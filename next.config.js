@@ -5,13 +5,7 @@ const {NODE_ENV} = process.env
 const isProd = NODE_ENV === 'production'
 
 const nextConfig = {
-	webpack: (config, {isServer}) => {
-		if (!isServer) {
-			config.node = {
-				fs: 'empty'
-			}
-		}
-
+	webpack: (config) => {
 		config.resolve.alias.components = path.join(__dirname, 'components')
 		config.resolve.alias.images = path.join(__dirname, 'public/static/images')
 
