@@ -10,7 +10,6 @@ export const AppContainer = styled.div`
 `
 
 export const Card = styled.a`
-
 	margin: 1rem;
 	flex-basis: 45%;
 	padding: 1.5rem;
