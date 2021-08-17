@@ -6,7 +6,9 @@ module.exports = {
 	semicolon: false,
 	nodeVersion: '12',
 	rules: {
+		'unicorn/prefer-module': 'off',
 		'unicorn/no-process-exit': 'warn',
+
 		'import/no-unassigned-import': 'off', // We import css/scss files globally in some cases
 		'import/extensions': 'off',
 
@@ -15,7 +17,11 @@ module.exports = {
 		'jsx-a11y/label-has-for': 'off', // Not picking up the htmlFor property
 
 		'@typescript-eslint/restrict-template-expressions': 'off',
-		'@typescript-eslint/ban-types': 'off'
+		'@typescript-eslint/ban-types': 'off',
+
+		'react/react-in-jsx-scope': 'off', // NextJS no need React import
+		'react/function-component-definition': 'off',
+		'react/prop-types': 'off'
 	},
 	overrides: [
 		{

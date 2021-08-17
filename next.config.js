@@ -1,8 +1,7 @@
 const path = require('path')
+const process = require('process')
 
-const {NODE_ENV} = process.env
-
-const isProd = NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === 'production'
 
 const nextConfig = {
 	webpack: (config) => {
@@ -12,8 +11,8 @@ const nextConfig = {
 		if (isProd) {
 			config.performance = {
 				hints: 'error',
-				maxEntrypointSize: 20000000,
-				maxAssetSize: 20000000
+				maxEntrypointSize: 20_000_000,
+				maxAssetSize: 20_000_000
 			}
 		}
 
